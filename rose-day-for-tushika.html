@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day, Tushika ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Playfair+Display:wght@400;700;900&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --rose-red:#c41e3a;
+    --deep-rose:#8b1538;
+    --soft-pink:#ffc0cb;
+    --blush:#fff0f3;
+    --cream:#fdf8f5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Crimson Pro',serif;
+    background:
+        radial-gradient(circle at top, rgba(196,30,58,.18), transparent 60%),
+        linear-gradient(135deg, var(--blush), var(--cream), #ffffff);
+    overflow-x:hidden;
+}
+
+/* Floating petals */
+.petal{
+    position:fixed;
+    width:18px;height:18px;
+    background:radial-gradient(circle,var(--rose-red),var(--soft-pink));
+    border-radius:50% 0 50% 0;
+    opacity:.55;
+    animation:float 15s infinite;
+    pointer-events:none;
+}
+@keyframes float{
+    0%{transform:translateY(-10vh) rotate(0);opacity:0}
+    15%{opacity:.6}
+    100%{transform:translateY(120vh) rotate(720deg);opacity:0}
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:2rem;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    background:radial-gradient(circle, rgba(196,30,58,.14), transparent 70%);
+    border-radius:50%;
+    animation:pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);opacity:.35}
+    50%{transform:scale(1.18);opacity:.18}
+}
+
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(4rem,12vw,8rem);
+    background:linear-gradient(var(--rose-red),var(--deep-rose));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    z-index:1;
+}
+
+.subtitle{
+    font-family:'Dancing Script',cursive;
+    font-size:2.2rem;
+    color:var(--deep-rose);
+    margin-bottom:2.5rem;
+    z-index:1;
+}
+
+/* IMAGE */
+.photo-container{
+    position:relative;
+    width:320px;
+    z-index:1;
+}
+
+.photo-container img{
+    width:100%;
+    border-radius:22px;
+    box-shadow:0 22px 55px rgba(196,30,58,.35);
+}
+
+/* Message under image */
+.image-message{
+    margin-top:1.2rem;
+    font-family:'Dancing Script',cursive;
+    font-size:1.8rem;
+    color:var(--rose-red);
+}
+
+/* CONTENT */
+.content{
+    max-width:900px;
+    margin:auto;
+    padding:4rem 2rem;
+}
+
+.love-letter{
+    background:white;
+    padding:3.6rem;
+    border-radius:32px;
+    box-shadow:0 22px 65px rgba(196,30,58,.15);
+    text-align:center;
+}
+
+.love-letter h2{
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    color:var(--rose-red);
+}
+
+.love-letter p{
+    font-size:1.2rem;
+    line-height:2;
+    margin-top:1.3rem;
+}
+
+.question{
+    font-family:'Dancing Script',cursive;
+    font-size:2.8rem;
+    color:var(--rose-red);
+    margin-top:3rem;
+}
+
+/* YES / NO */
+.choice-buttons{
+    margin-top:2.2rem;
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    position:relative;
+    height:120px;
+}
+
+.choice-buttons button{
+    font-size:1.35rem;
+    padding:.85rem 2.4rem;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+#yesBtn{
+    background:var(--rose-red);
+    color:white;
+}
+#yesBtn:hover{
+    transform:scale(1.15);
+}
+
+#noBtn{
+    background:#e3e3e3;
+    color:#555;
+    position:absolute;
+}
+
+/* POPUP */
+.rose-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.68);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.popup-content{
+    background:white;
+    padding:2.4rem;
+    border-radius:28px;
+    text-align:center;
+    animation:fade .6s ease;
+}
+
+@keyframes fade{
+    from{transform:scale(.82);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+.popup-content img{
+    width:290px;
+    border-radius:22px;
+}
+
+.popup-text{
+    font-family:'Dancing Script',cursive;
+    font-size:2.4rem;
+    color:var(--rose-red);
+    margin-top:1rem;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:3rem;
+    font-family:'Dancing Script',cursive;
+    font-size:1.9rem;
+    color:var(--deep-rose);
+}
+</style>
+</head>
+
+<body>
+
+<div class="petal" style="left:12%"></div>
+<div class="petal" style="left:42%"></div>
+<div class="petal" style="left:72%"></div>
+
+<section class="hero">
+    <h1>Tushika</h1>
+    <p class="subtitle">Every rose I could give you still wouldn’t be enough</p>
+
+    <div class="photo-container">
+        <img src="rose-image.png" alt="Rose">
+        <div class="image-message">
+            Happy Rose Day, Tushika<br>
+            With all my love, today and always
+        </div>
+    </div>
+</section>
+
+<div class="content">
+    <div class="love-letter">
+        <h2>My Dearest Tushika,</h2>
+        <p>
+            On this Rose Day, I wanted to remind you of something you already know
+            but that I never tire of saying — you are the most precious part of my life.
+        </p>
+
+        <p class="question">Be my forever rose? 🌹</p>
+
+        <div class="choice-buttons">
+            <button id="yesBtn">YES ❤️</button>
+            <button id="noBtn">NO 😅</button>
+        </div>
+    </div>
+</div>
+
+<!-- POPUP -->
+<div id="rosePopup" class="rose-popup">
+    <div class="popup-content">
+        <img src="my-image.png" alt="My Image">
+        <p class="popup-text">Rose for you<br>For You ❤️</p>
+    </div>
+</div>
+
+<footer>
+    Happy Rose Day 🌹❤️
+</footer>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const popup = document.getElementById("rosePopup");
+
+// NO moves FAR away
+noBtn.addEventListener("mouseenter", () => {
+    const x = (Math.random() * 600) - 300;
+    const y = (Math.random() * 300) - 150;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+// YES opens popup
+yesBtn.addEventListener("click", () => {
+    popup.style.display = "flex";
+});
+</script>
+
+</body>
+</html>
